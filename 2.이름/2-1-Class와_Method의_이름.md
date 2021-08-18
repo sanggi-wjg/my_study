@@ -20,3 +20,8 @@ get, set, is 를 붙인다.
 name, street, houseNumber, city, state 보다는  
 addr 이라는 접두사를 사용해서   
 addrName, addrStreet, addrHouseNumber, addrCity, addrState 변경해서 사용하면 의미가 명확해진다.
+
+#
+## 이름의 길이는 상관없다
+한 가지의 역할만 하는 함수가 작고 짧은 좋은 이름을 가진 다면 좋겠지만,  
+이름이 길어져도 상관없다. 짧고 무슨 역할을 하는지 모르겠을 이름보다 길고 무슨 역할인지 명확한 이름이 더 좋다.  
