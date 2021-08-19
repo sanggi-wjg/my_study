@@ -37,7 +37,7 @@ Boolean이 Parameter로 있는 경우 함수는 이미 두가지 역할을 처�
 
 변경 前
 ```python
-def md5_hash(text:string, returnHex:bool) -> bytes
+def md5_hash(text:string, returnHex:bool) -> bytes:
     m = hashlib.md5(text.encode('UTF-8'))
 
     if returnHex:
@@ -51,10 +51,10 @@ def md5_hash(text:string, returnHex:bool) -> bytes
 def md5_hash(text:string) -> string:
     return hashlib.md5(text.encode('UTF-8'))
 
-def md5_hash_digest(text:string) -> bytes
+def md5_hash_digest(text:string) -> bytes:
     return md5_hash(text).digest()
 
-def md5_hash_hexdigest(text:string) -> bytes
+def md5_hash_hexdigest(text:string) -> bytes:
     return md5_hash(text).hexdigest()
 ```
 
