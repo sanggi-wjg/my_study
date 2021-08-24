@@ -9,8 +9,8 @@ type Something struct {
 
 func NewSomething(some string, thing string) *Something {
 	s := Something{
-		some:  "Some",
-		thing: "Thing",
+		some:  some,
+		thing: thing,
 	}
 	return &s
 }
