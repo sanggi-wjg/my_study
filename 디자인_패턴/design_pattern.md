@@ -29,7 +29,20 @@
 |예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/builder.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/builder_2.py)|
 
 ### Prototype Pattern
+|구분|내용|
+|----|:----|
+|목적|서비스 코드에서 계산된 값을 가진 객체를 여러번 생성 하면 비효율적임. 따라서 복사를 해야 함|
+|예시|대용량 데이터 처리하는 정산 같은 곳에서 되있긴 한데... 딱히 안써 봄... ORM 들이 이런식으로 하긴 함... lazy load긴 한데...|
+|장점| |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/prototype.py) |
+
 ### Singleton Pattern
+|구분|내용|
+|----|:----|
+|목적|천상천하! 유아독존! |
+|예시|로그 등 단일 객체로 돌아가야 하는 것에서 사용 |
+|장점|쉬움 |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/singleton.py) |
 
 #
 ## Structural Patterns
@@ -40,22 +53,38 @@
 |예시|WMS 개발에서 출고요청 기능에서 사업부에 대해 wrapping 함 |
 |장점| 유지보수시 소스의 흐름(?)에 영향을 미치는 점이 적으며 확장이 쉬움 |
 |예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/adapter.py) |
+
 ### Bridge Pattern
+
 ### Composite Pattern
+
 ### Decorator Pattern
+
 ### Facade Pattern
+
 ### Flyweight Pattern
+
 ### Proxy Pattern
 
 #
 ## Behavioral Patterns
+
 ### Chain of Responsibility Pattern
+
 ### Iterator Pattern
+
 ### Memento Pattern
+
 ### State Pattern
+
 ### Template Method Pattern
+
 ### Command Pattern
+
 ### Mediator Pattern
+
 ### Observer Pattern
+
 ### Strategy Pattern
+
 ### Visitor Pattern
