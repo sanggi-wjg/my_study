@@ -16,7 +16,7 @@
 |구분|내용|
 |----|:----|
 |목적|클래스(명사)를 묶어서 메소드(동사) 들을 수행할 때 사용|
-|예시| |
+|예시|딱히 안써봄 |
 |장점|클라이언트 서비스 코드에서 호출을 할 때 응집도, 종속도를 낮춰주며 추상화를 통해서 확장을 쉽게 해 줌 |
 |예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/abstract_factory.py) |
  
@@ -24,9 +24,9 @@
 |구분|내용|
 |----|:----|
 |목적|객체들을 조합하기 위해서 사용함. 추상 팩토리와 비슷함|
-|예시| |
+|예시|WMS에서 HTTP API 부분 사용함 |
 |장점|캡슐화, 클라이언트로 부터 객체 분리 |
-|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/code_example/builder.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/code_example/builder_2.py)|
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/builder.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/builder_2.py)|
 
 ### Prototype Pattern
 ### Singleton Pattern
@@ -34,6 +34,12 @@
 #
 ## Structural Patterns
 ### Adapter Pattern
+|구분|내용|
+|----|:----|
+|목적|같은 목적을 가진 다수의 클래스(명사)의 메소드(동사)들이 똑같은 순서와 의미를 가지는데, 사용 중 소수의 클래스의 메소드(동사) 의미가 변경점 생기면 사용 |
+|예시|WMS 개발에서 출고요청 기능에서 사업부에 대해 wrapping 함 |
+|장점| 유지보수시 소스의 흐름(?)에 영향을 미치는 점이 적으며 확장이 쉬움 |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/adapter.py) |
 ### Bridge Pattern
 ### Composite Pattern
 ### Decorator Pattern

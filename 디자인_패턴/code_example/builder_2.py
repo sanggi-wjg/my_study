@@ -68,7 +68,7 @@ class ServiceStatusCheckerBuilder(ServiceCheckBuilder):
         print('Check Celery')
 
 
-class ServiceChecker(object):
+class ServiceCheckDirector(object):
 
     def __init__(self):
         self._builder = None
@@ -91,16 +91,16 @@ class ServiceChecker(object):
 
 
 def client_code():
-    service_checker = ServiceChecker()
-    service_health_builder = ServiceHealthCheckBuilder()
+    director = ServiceCheckDirector()
+    health_builder = ServiceHealthCheckBuilder()
 
-    service_checker.builder = service_health_builder
-    service_checker.check_only_important_service()
-    service_checker.check_all_service()
+    director.builder = health_builder
+    director.check_only_important_service()
+    director.check_all_service()
 
-    service_checker.builder = ServiceStatusCheckerBuilder()
-    service_checker.check_only_important_service()
-    service_checker.check_all_service()
+    director.builder = ServiceStatusCheckerBuilder()
+    director.check_only_important_service()
+    director.check_all_service()
 
 
 """

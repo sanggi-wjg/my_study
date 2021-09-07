@@ -90,5 +90,9 @@ def client_code():
     builder.produce_part_b()
     builder.product.show_parts()
 
-
+"""
+Part A
+Part A	Part A	Part B	Part C
+Part A	Part A	Part B	Part C	Part A	Part B
+"""
 client_code()
