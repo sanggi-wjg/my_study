@@ -26,7 +26,7 @@
 |목적|객체들을 조합하기 위해서 사용함. 추상 팩토리와 비슷함|
 |예시| |
 |장점|캡슐화, 클라이언트로 부터 객체 분리 |
-|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/code_example/abstract_factory.py) |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/code_example/builder.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/code_example/builder_2.py)|
 
 ### Prototype Pattern
 ### Singleton Pattern
