@@ -72,6 +72,13 @@ Special One.
 |예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/bridge.py) | 
 
 ### Composite Pattern
+트리 구조로 객체안에 어떻게 구현 되어 있는지 상관 없이 공통 메소드로 동일하게 처리할 수 있음 
+|구분|내용|
+|----|:----|
+|목적| |
+|예시| 안 써봄 |
+|장점|  |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/composite.py) | 
 
 ### Decorator Pattern
 사용 목적에서 Builder pattern 이랑 비슷함
