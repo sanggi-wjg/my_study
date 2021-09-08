@@ -93,6 +93,13 @@ Special One.
 ### State Pattern
 
 ### Template Method Pattern
+이 패턴은 몰라도 이런식으로 개발한 부분이 있을 것이다.
+|구분|내용|
+|----|:----|
+|목적| |
+|예시| 많이 씀 |
+|장점| 쉬움 |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/template_method.py) | 
 
 ### Command Pattern
 
