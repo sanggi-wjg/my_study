@@ -74,6 +74,15 @@ Special One.
 ### Composite Pattern
 
 ### Decorator Pattern
+사용 목적에서 Builder pattern 이랑 비슷함
+개인적으로 느끼기에는 별로 안좋다고 느낌  
+쓴다고 하면 다른 패턴이나 같이 응용해서 구현하거나 상황에 맞게 변조해서 구현 해야하는 부분이 많다고 느낌
+|구분|내용|
+|----|:----|
+|목적| |
+|예시| 안 써봄, 굳이 쓴다면 피킹리스트에서 쓸 수 있을거 같음, 근데 구현 한다면 이걸로 안하고 Builder 로 구현할 듯 |
+|장점|  |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/decorator.py) | 
 
 ### Facade Pattern
 
@@ -96,12 +105,19 @@ Special One.
 이 패턴은 몰라도 이런식으로 개발한 부분이 있을 것이다.
 |구분|내용|
 |----|:----|
-|목적| |
-|예시| 많이 씀 |
+|목적| 클래스 메인 로직에 대부분 공통 메소드인데 중간에 몇개가 추가되거나 변경 사항이 생겼을때나 메소드안에 메소드가 추가 되는 같은 상황에서 사용 |
+|예시| 진짜 개 많이 씀 |
 |장점| 쉬움 |
 |예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/template_method.py) | 
 
 ### Command Pattern
+요청에 대한 독립 객체로 만들어 줌. 커맨드 패턴은 요청의 대한 정보를 전달하고, 연기, 취소 등을 구현할 수 있음
+|구분|내용|
+|----|:----|
+|목적|  |
+|예시| 개발에서 linux shell cli 관련 모듈에서 씀 |
+|장점| 쉬움 |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/command.py) | 
 
 ### Mediator Pattern
 
