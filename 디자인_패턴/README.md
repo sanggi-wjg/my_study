@@ -92,6 +92,14 @@ Special One.
 |예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/decorator.py) | 
 
 ### Facade Pattern
+프로젝트에서 나만의 라이브러리(패키지, 등등) 처럼 객체들을 모아모아 구현 하는 것
+|구분|내용|
+|----|:----|
+|목적| |
+|예시| 많이 씀, 개발에서 출고에서 씀 |
+|장점| 소스 흐름이 간단(?)해지고 객체들로 다양한 구현을 할 수 있음, 확장성도 좋음 |
+|단점| 객체 초기화나 의존성을 가지고 있어서 확장은 상관 없지만 변경 등에 어려움 |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/facade.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/facade_2.py) | 
 
 ### Flyweight Pattern
 
