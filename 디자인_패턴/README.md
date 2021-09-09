@@ -102,8 +102,22 @@ Special One.
 |예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/facade.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/facade_2.py) | 
 
 ### Flyweight Pattern
+여러 객체들간에 사용할 공통 데이터들에 대해서 공유를 통해서 가용 메모리를 효율적으로 사용할 수 있도록 해줌 
+|구분|내용|
+|----|:----|
+|목적| 생성시에 큰 자원이 들어가고 자주 사용하는 객체들에 대해서 효율적으로 사용하기 위해서 미리 생성을 해놓는다.  |
+|예시| 안써봄 |
+|장점| 메모리 효율적 사용 |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/facade.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/flyweight.py) | 
 
 ### Proxy Pattern
+패턴을 통해 원래 객체 요청에 대해서 액세스 제어 등을 전이나 후에 수행할 수 있다.
+|구분|내용|
+|----|:----|
+|목적|  |
+|예시| 프레임워크에 기본적으로 기능이 있음 |
+|장점|  |
+|예제|[Example Code](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/facade.py) / [Example Code 2](https://github.com/sanggi-wjg/clean_code_study/blob/main/%EB%94%94%EC%9E%90%EC%9D%B8_%ED%8C%A8%ED%84%B4/code_example/proxy.py) | 
 
 #
 ## Behavioral Patterns
