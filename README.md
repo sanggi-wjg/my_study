@@ -6,24 +6,24 @@ Now... Only God Knows.
 
 # 2021년
 ### 이론
-* Design Pattern  
-* Clean Code 
-* Micro Service Architecture
+- [X] Design Pattern  
+- [X] Clean Code 
+- [ ] Micro Service Architecture
 
 ### 언어
-* Go
+- [X] Go 기초
 
 ### 오픈 소스
-* [Go] gin web framework 
-* [Go] gorms
-* [Python] colorful_print pypi 등록  
-* [Python] django-rest-framework
-* [Python] django-ploty-dash + dash + pandas
+- [X] [Go] gin web framework demo 
+- [X] [Go] gorms demo
+- [X] [Python] color_print pypi 패키지 등록  
+- [X] [Python] django-rest-framework demo
+- [X] [Python] django-ploty-dash + dash + pandas demo
 
 ### TODO
-* pandas dataframe 심화
-* Go 심화
-* WEB RTC
-* JS Web Browser API
+- [ ] pandas dataframe 심화
+- [ ] Go 심화
+- [ ] WEB RTC
+- [ ] JS Web Browser API
 https://developer.mozilla.org/ko/docs/Web/API  
 https://www.youtube.com/watch?v=Vatd-V0pLXo
