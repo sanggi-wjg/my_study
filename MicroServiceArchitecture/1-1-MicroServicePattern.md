@@ -17,7 +17,7 @@
 ```
 동일한 요청에 대해 부하 분산, 일반적인 모놀리식 확장 수단으로 WAS 인스턴스 N개를 실행시켜 놓은 뒤에 Load Balancer를 통해서 들어온 요청을 고루 분배 (단일 인스턴스 -> 다중 인스턴스)
 ```
-![1-1](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServicePattern/data/1-1.PNG)
+![1-1](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServiceArchitecture/data/1-1.PNG)
 
 #
 ### Z축 확장 (데이터 분할)
@@ -28,7 +28,7 @@ Z축 확장은 트랜잭션 및 데이터 볼륨을 처리하기 좋은 수단�
 
 TODO: 왜 트랜잭션과 데이터 볼륨에 좋은거지?? 샤딩이나 proxySQL 같은거 써서 그런가?? 나중에 다시 와서 추가 바람.
 ```
-![1-2](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServicePattern/data/1-2.PNG)
+![1-2](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServiceArchitecture/data/1-2.PNG)
 
 #
 ### Y축 확장 (기능분해)
@@ -36,4 +36,4 @@ TODO: 왜 트랜잭션과 데이터 볼륨에 좋은거지?? 샤딩이나 proxyS
 서로 상이한 기능을 나누어서 확장, 모놀리스 -> 마이크로 서비스.
 X축과 Z축 확장은 앱의 능력과 가용성은 개선되지만, 더 복잡해지는 문제에 대해서는 해결이 되지 않는다. 따라서 Y축의 기능 분해가 필요하다.
 ```
-![1-3](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServicePattern/data/1-3.PNG)
+![1-3](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServiceArchitecture/data/1-3.PNG)
