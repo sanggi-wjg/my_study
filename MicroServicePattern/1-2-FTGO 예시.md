@@ -2,14 +2,14 @@
 
 ## 모놀리식 구조
 전형적인 자바 애플리케이션인 FTGO 의 전체 구조는 코어가 비지니스 로직으로 구성된 융각형 아키텍쳐이며 UI, 외부 시스템 통합을 위해 어댑터가 비지니스 로직을 감싼 모양새이다.  
-![2-1](https://raw.githubusercontent.com/sanggi-wjg/micro_service_pattern_study/main/data/2-1.png)
+![2-1](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServicePattern/data/2-1.png)
 
 #
 ## 마이크로 서비스 구조
 FTGO 애플리케이션은 각 요청에 대해 서비스로 보내고 각자의 API 를 통해 서로 협동한다.
-![2-2](https://raw.githubusercontent.com/sanggi-wjg/micro_service_pattern_study/main/data/2-2.png)
+![2-2](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServicePattern/data/2-2.png)
 
-![2-3](https://raw.githubusercontent.com/sanggi-wjg/micro_service_pattern_study/main/data/2-3.PNG)
+![2-3](https://raw.githubusercontent.com/sanggi-wjg/my_study/main/MicroServicePattern/data/2-3.PNG)
 
 #
 ## 마이크로 서비스로 변경을 통해
