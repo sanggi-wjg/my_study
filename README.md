@@ -1,5 +1,6 @@
-# clean_code_study
-Clean Code Study
-
-When i wrote this code, only God & I understood what it did.
+# My Study
+```
+When i wrote this code, only God & I understood what it did.  
 Now... Only God Knows.
+```
+
