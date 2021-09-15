@@ -19,11 +19,11 @@ Now... Only God Knows.
 - [X] [Python] color_print pypi 패키지 등록  
 - [X] [Python] django-rest-framework demo
 - [X] [Python] django-ploty-dash + dash + pandas demo
+- [ ] [Python] pandas dataframe 심화
 
 ### TODO
 - [ ] Cache, Redis memory 
 - [ ] JWT 
-- [ ] pandas dataframe 심화
 - [ ] WEB RTC
 - [ ] JS Web Browser API
 https://developer.mozilla.org/ko/docs/Web/API  
