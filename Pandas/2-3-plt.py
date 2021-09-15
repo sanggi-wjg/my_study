@@ -44,3 +44,14 @@ axes_2: Axes = violin_fig.add_subplot(1, 1, 1)
 
 axes_2.violinplot(dataset['total_bill'])
 plt.show()
+
+# Line
+line_fig = plt.figure()
+axes_3: Axes = line_fig.add_subplot(1, 1, 1)
+
+axes_3.plot(dataset['total_bill'], label = 'Total bill')
+axes_3.plot(dataset['tip'], label = 'Tip')
+
+plt.legend(loc = 'upper right')
+plt.show()
+plt.close()

@@ -5,7 +5,7 @@
 저. 크리스 리처드슨
 ```
 
-## 사용 기술
+## MSA 사용 기술 스택
 
 #### 배포 
 ```
@@ -51,4 +51,13 @@ gRPC
 
 # 통신 실패에 대한 대처 패턴
 Netflix Hystrix(히스트릭스)
+
+# 메시징 큐, 브로커 (비동기)
+RabbitMQ
+ActiveMQ
+ZeroMQ
+Kafka
+Celery
+AWS Kinesis
+AWS SQS
 ```
