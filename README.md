@@ -21,12 +21,13 @@ Now... Only God Knows.
 - [X] [Python] django-ploty-dash + dash + pandas demo
 - [ ] [Python] pandas dataframe 심화
 
-### TODO
-- [ ] Cache, Redis memory 
-- [ ] JWT 
-- [ ] WEB RTC
-- [ ] JS Web Browser API
+### TODO Priority
+1. MySQL
+1. Cache, Redis memory 
+1. JWT 
+1. WEB RTC
+1. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
 https://www.youtube.com/watch?v=Vatd-V0pLXo
-- [ ] Go 심화
-- [ ] C++ ?
+1. Go 심화
+1. C++ ?
