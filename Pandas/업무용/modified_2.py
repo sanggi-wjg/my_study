@@ -1,10 +1,10 @@
 import csv
-from typing import List, Tuple
+from typing import Tuple
 
 
 def read_csv() -> Tuple[list, list]:
     before, after = [], []
-    file = open('change_test.csv', 'r')
+    file = open('change.csv', 'r')
     try:
         for row in csv.reader(file):
             before.append(row[0])
@@ -25,24 +25,19 @@ def check(after_stc: str) -> str:
         )
 
 
-BEFORE_STCS, AFTER_STCS = read_csv()
-
 """
-    A 
+A -> B
 
-    A -> B
+A -> B
+B -> C
 
-    A -> B
-    B -> C
+A -> B
+B -> C
+C -> D
+...
+"""
 
-    A -> B
-    B -> C
-    C -> D
-
-    ...
-
-    이런 상황
-    """
+BEFORE_STCS, AFTER_STCS = read_csv()
 
 results = []
 while AFTER_STCS:
