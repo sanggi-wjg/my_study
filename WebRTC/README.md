@@ -26,3 +26,7 @@ Web RTC는 SDP Format에 맞춰 영상, 음성 등 데이터 교환.
 ### ICE (Interactive Connectivity Establishment)
 NAT 환경에서 자신의 Public IP를 파악하고 상대방에게 데이터 전송을 위한 Peer간의  
 응답 프로토콜로 일반적으로 Stun/Turn 서버를 이용해서 구축.  
+
+#
+## 참고 
+https://codelabs.developers.google.com/codelabs/webrtc-web/#3
