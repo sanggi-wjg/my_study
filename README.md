@@ -19,13 +19,13 @@ Now... Only God Knows.
 - [X] [Python] color_print pypi 패키지 등록  
 - [X] [Python] django-rest-framework demo
 - [X] [Python] django-ploty-dash + dash + pandas demo
-- [ ] [Python] pandas dataframe 심화
+- [X] [Python] pandas dataframe 심화
+- [X] [Javascript] Web RTC
 
 ### TODO Priority
 1. MySQL
 1. Cache, Redis memory 
 1. JWT 
-1. WEB RTC
 1. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
 https://www.youtube.com/watch?v=Vatd-V0pLXo
