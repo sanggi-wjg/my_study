@@ -1,17 +1,36 @@
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Web RTC Demo</title>
 </head>
 
 <body>
-    <div>
-        <video id="localVideo" autoplay width="480px"></video>
-        <video id="remoteVideo" width="480px" autoplay></video>
+
+<div>
+    <form id="fileForm">
+        <input type="file" id="fileInput" name="fileInput">
+        <button disabled id="sendFileButton">Send</button>
+        <button disabled id="abortButton">Abort</button>
+    </form>
+
+    <div class="progress">
+        <div class="label">Send Progress :</div>
+        <progress id="sendProgressBar" max="100" value="0"></progress>
     </div>
 
-<!--    <script src="/socket.io/socket.io.js"></script>-->
-    <script src="rtc.js"></script>
-</body>
+    <div class="progress">
+        <div class="label">Receive Progress :</div>
+        <progress id="receiveProgressBar" max="100" value="0"></progress>
+    </div>
 
+    <div id="bitrate">
+        <a id="download"></a>
+        <span id="statusMessage"></span>
+    </div>
+
+</div>
+
+<script src="static/adapter.js"></script>
+<script src="static/rtc.js"></script>
+</body>
 </html>

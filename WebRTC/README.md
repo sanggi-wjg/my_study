@@ -28,5 +28,10 @@ NAT 환경에서 자신의 Public IP를 파악하고 상대방에게 데이터 �
 응답 프로토콜로 일반적으로 Stun/Turn 서버를 이용해서 구축.  
 
 #
-## 참고 
-https://codelabs.developers.google.com/codelabs/webrtc-web/#3
+## 참고
+#### Video Stream
+https://codelabs.developers.google.com/codelabs/webrtc-web/#3  
+https://velog.io/@ehdrms2034/WebRTC-%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EB%A1%9C-%ED%99%94%EC%83%81-%EC%B1%84%ED%8C%85%EC%9D%84-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EB%8B%A4%EA%B3%A0
+
+#### File Stream
+https://github.com/webrtc/samples/tree/gh-pages/src/content/datachannel/filetransfer
