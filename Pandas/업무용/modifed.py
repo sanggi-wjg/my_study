@@ -14,4 +14,3 @@ for idx, series in df.iterrows():
         modified_stcs.append([f"{before_stc} → {after_stc}"])
 
 pprint(modified_stcs)
-TJEHCMWVS02433

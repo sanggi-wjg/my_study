@@ -2,9 +2,9 @@ import csv
 from typing import Tuple
 
 
-def read_csv() -> Tuple[list, list]:
+def read_csv(filename: str) -> Tuple[list, list]:
     before, after = [], []
-    file = open('change.csv', 'r')
+    file = open(filename, 'r')
     try:
         for row in csv.reader(file):
             before.append(row[0])
@@ -12,6 +12,16 @@ def read_csv() -> Tuple[list, list]:
     finally:
         file.close()
     return before, after
+
+
+def write_csv(filename: str, datalist: list):
+    file = open(filename, 'w', newline = '')
+    try:
+        writer = csv.writer(file)
+        for data in datalist:
+            writer.writerow([data])
+    finally:
+        file.close()
 
 
 def check(after_stc: str) -> str:
@@ -36,8 +46,8 @@ B -> C
 C -> D
 ...
 """
-
-BEFORE_STCS, AFTER_STCS = read_csv()
+READ_FILENAME, WRITE_FILENAME = 'change.csv', 'result.csv'
+BEFORE_STCS, AFTER_STCS = read_csv(READ_FILENAME)
 
 results = []
 while AFTER_STCS:
@@ -45,3 +55,5 @@ while AFTER_STCS:
     results.append(
         check(after_stc)
     )
+
+write_csv(WRITE_FILENAME, results)
