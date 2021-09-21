@@ -19,9 +19,9 @@ Now... Only God Knows.
 - [X] [Go] gorms demo (8월)
 - [X] [Python] django-rest-framework demo (9월)
 - [X] [Python] django-ploty-dash, dash, pandas 연동 (9월)
-- [x] [Python, Redis] django, Redis 연동 cache 구현 (9월)
-- [X] [Python] pandas dataframe 심화 (9월)
-- [X] [Javascript] Web RTC (9월)
+- [x] [Python, Redis] django, Redis 연동 cache 데모 구현 (9월)
+- [X] [Python] pandas dataframe 정리 (9월)
+- [X] [Javascript] Web RTC 데모 구현 (9월)
 
 ### TODO Priority
 1. MySQL
