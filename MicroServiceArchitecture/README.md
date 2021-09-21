@@ -56,7 +56,7 @@ Netflix Hystrix(히스트릭스)
 RabbitMQ
 ActiveMQ
 ZeroMQ
-Kafka
+Apache Kafka
 Celery
 AWS Kinesis
 AWS SQS
