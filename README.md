@@ -6,25 +6,25 @@ Now... Only God Knows.
 
 # 2021년
 ### 이론
-- [X] Design Pattern  
-- [X] Clean Code 
-- [ ] Micro Service Architecture
+- [X] Clean Code (7월)
+- [X] Design Pattern (8월)
+- [ ] Micro Service Architecture (8월~)
 
 ### 언어
-- [X] Go 기초
+- [X] Go 기초 (8월)
 
 ### 오픈 소스
-- [X] [Go] gin web framework demo 
-- [X] [Go] gorms demo
-- [X] [Python] color_print pypi 패키지 등록  
-- [X] [Python] django-rest-framework demo
-- [X] [Python] django-ploty-dash + dash + pandas demo
-- [X] [Python] pandas dataframe 심화
-- [X] [Javascript] Web RTC
+- [X] [Python] color_print pypi 패키지 등록 (7월)
+- [X] [Go] gin web framework demo (8월) 
+- [X] [Go] gorms demo (8월)
+- [X] [Python] django-rest-framework demo (9월)
+- [X] [Python] django-ploty-dash, dash, pandas 연동 (9월)
+- [x] [Python, Redis] django, Redis 연동 cache 구현 (9월)
+- [X] [Python] pandas dataframe 심화 (9월)
+- [X] [Javascript] Web RTC (9월)
 
 ### TODO Priority
 1. MySQL
-1. Cache, Redis memory 
 1. JWT 
 1. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
