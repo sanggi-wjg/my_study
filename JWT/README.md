@@ -104,3 +104,10 @@ JWT 사용시 사용자 인증에 대한 정보는 토큰에 포함하기 때문
 
 ## 참고
 https://jwt.io/
+
+##### Django demo 
+어차피 django restframework 에 기능 있으니 그거 사용하자
+https://github.com/webstack/django-jwt-auth
+
+##### Flask demo
+https://github.com/vimalloc/flask-jwt-simple

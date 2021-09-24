@@ -30,9 +30,16 @@ def check(after_stc: str) -> str:
     else:
         index = BEFORE_STCS.index(after_stc)
         BEFORE_STCS.pop(index)
-        return check(
-            AFTER_STCS.pop(index)
-        )
+        return check(AFTER_STCS.pop(index))
+
+
+def check_2(before_stc: str, after_stc: str, result: str) -> str:
+    result += f" {before_stc} -> {after_stc}"
+    if after_stc not in BEFORE_STCS:
+        return result
+    else:
+        index = BEFORE_STCS.index(after_stc)
+        return check_2(BEFORE_STCS.pop(index), AFTER_STCS.pop(index), result)
 
 
 """
@@ -46,14 +53,21 @@ B -> C
 C -> D
 ...
 """
-READ_FILENAME, WRITE_FILENAME = 'change.csv', 'result.csv'
+READ_FILENAME, WRITE_FILENAME = 'change.csv', 'after.csv'
 BEFORE_STCS, AFTER_STCS = read_csv(READ_FILENAME)
 
 results = []
 while AFTER_STCS:
     _, after_stc = BEFORE_STCS.pop(0), AFTER_STCS.pop(0)
-    results.append(
-        check(after_stc)
-    )
+    results.append(check(after_stc))
+
+# while AFTER_STCS:
+#     before_stc, after_stc = BEFORE_STCS.pop(0), AFTER_STCS.pop(0)
+#     result = ''
+#     result += check_2(before_stc, after_stc, result)
+#     results.append(result)
+#
+# for r in results:
+#     print(r)
 
 write_csv(WRITE_FILENAME, results)
