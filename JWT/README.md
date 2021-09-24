@@ -102,12 +102,25 @@ JWT 사용시 사용자 인증에 대한 정보는 토큰에 포함하기 때문
 * 필드를 너무 많이 사용하면 토큰이 너무 커짐
 * 거의 모든 요청에 전송되므로 트래픽 크기에 영향을 미침
 
+## Client Side
+https://www.reddit.com/r/reactjs/comments/jjkddv/how_to_store_jwt_in_the_client_side/  
+> Almost everyone does JWT wrong in SPAs. Never use local storage. Refresh token in an HTTP Only, Secure cookie set when the user logs in. Access token only stored in memory.  
+>
+> On every first load you send a request to the server, the server checks if the refresh token cookie is set and if it's valid. If it is, return a fresh access token to the client and keep it in memory. After that you send another request for the actual data with the Authorization header set.
+> 
+> Every time a user reloads a page or closes their browser you go through the same process. When the access token expires you request a new one using the refresh token cookie. When the refresh token expires you ask your users to login again.
+> 
+> I usually go with 1 month refresh tokens and 15 minute access tokens. There is no need to worry about request count or unnecessary traffic.
+
 ## 참고
 https://jwt.io/
+
+https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/
 
 ##### Django demo 
 어차피 django restframework 에 기능 있으니 그거 사용하자
 https://github.com/webstack/django-jwt-auth
 
-##### Flask demo
+##### Flask JWT 구현 참조
 https://github.com/vimalloc/flask-jwt-simple
+https://github.com/vimalloc/flask-jwt-extended

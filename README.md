@@ -9,6 +9,7 @@ Now... Only God Knows.
 - [X] Clean Code (7월)
 - [X] Design Pattern (8월)
 - [ ] Micro Service Architecture (8월~)
+- [X] JSON Web Token 공부 및 데모 구현(9월)
 
 ### 언어
 - [X] Go 기초 (8월)
@@ -25,7 +26,6 @@ Now... Only God Knows.
 
 ### TODO Priority
 1. MySQL
-1. JWT 
 1. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
 https://www.youtube.com/watch?v=Vatd-V0pLXo
