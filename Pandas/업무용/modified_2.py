@@ -33,13 +33,13 @@ def check(after_stc: str) -> str:
         return check(AFTER_STCS.pop(index))
 
 
-def check_2(before_stc: str, after_stc: str, result: str) -> str:
-    result += f" {before_stc} -> {after_stc}"
-    if after_stc not in BEFORE_STCS:
-        return result
-    else:
-        index = BEFORE_STCS.index(after_stc)
-        return check_2(BEFORE_STCS.pop(index), AFTER_STCS.pop(index), result)
+# def check_2(before_stc: str, after_stc: str, result: str) -> str:
+#     result += f" {before_stc} -> {after_stc}"
+#     if after_stc not in BEFORE_STCS:
+#         return result
+#     else:
+#         index = BEFORE_STCS.index(after_stc)
+#         return check_2(BEFORE_STCS.pop(index), AFTER_STCS.pop(index), result)
 
 
 """
