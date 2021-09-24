@@ -6,9 +6,9 @@ Now... Only God Knows.
 
 # 2021년
 ### 이론
-- [X] Clean Code (7월)
-- [X] Design Pattern (8월)
-- [ ] Micro Service Architecture (8월~)
+- [X] Clean Code 정리 (7월)
+- [X] Design Pattern 정리 (8월)
+- [ ] Micro Service Architecture 공부 및 데모 구현 (8월~)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
 
 ### 언어
@@ -16,10 +16,10 @@ Now... Only God Knows.
 
 ### 오픈 소스
 - [X] [Python] color_print pypi 패키지 등록 (7월)
-- [X] [Go] gin web framework demo (8월) 
-- [X] [Go] gorms demo (8월)
-- [X] [Python] django-rest-framework demo (9월)
-- [X] [Python] django-ploty-dash, dash, pandas 연동 (9월)
+- [X] [Go] gin web framework 데모 (8월) 
+- [X] [Go] gorms 데모 (8월)
+- [X] [Python] django-rest-framework 데모 (9월)
+- [X] [Python] django-ploty-dash, dash, pandas 연동 및 데모 구현 (9월)
 - [x] [Python, Redis] django, Redis 연동 cache 데모 구현 (9월)
 - [X] [Python] pandas dataframe 정리 (9월)
 - [X] [Javascript] Web RTC 데모 구현 (9월)
