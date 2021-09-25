@@ -13,17 +13,18 @@ admin / wpdlwl
 ```
 
 ### Nexus 세팅
-docker-hosted, docker-hub 추가
+#### docker-hosted, docker-hub 추가
 ![nexus-1](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-1.png?raw=true)
 
-repo-docker-hosted 추가
+##### repo-docker-hosted 추가
 ![nexus-2](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-2.png?raw=true)
 ![nexus-3](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-3.png?raw=true)
 
-docker-hub 추가
+##### docker-hub 추가
 ![nexus-4](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-4.png?raw=true)
 ![nexus-5](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-5.png?raw=true)
 
+### nexus 연동
 ```shell script
 # docker http
 sudo vi /etc/docker/daemon.json
@@ -33,7 +34,10 @@ sudo vi /etc/docker/daemon.json
 
 # docker hub login
 docker login localhost:5000
+```
 
+### nexus docker hub 테스트
+```shell script
 # docker hub push
 docker images
 REPOSITORY        TAG         IMAGE ID       CREATED       SIZE
