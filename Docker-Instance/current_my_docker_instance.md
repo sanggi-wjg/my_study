@@ -5,7 +5,5 @@ Demo Docker instance 서버에 설치 리스트, 명령어
 ubuntu 20.04
 
 sudo apt update && sudo apt upgrade -y
-sudo apt install docker.io -y
+sudo apt install -y docker.io docker-compose 
 ```
-
-

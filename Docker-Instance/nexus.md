@@ -12,6 +12,18 @@ sudo docker exec -it demo-nexus bash
 admin / wpdlwl
 ```
 
+### Nexus 세팅
+docker-hosted, docker-hub 추가
+![nexus-1](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-1.png?raw=true)
+
+repo-docker-hosted 추가
+![nexus-2](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-2.png?raw=true)
+![nexus-3](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-3.png?raw=true)
+
+docker-hub 추가
+![nexus-4](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-4.png?raw=true)
+![nexus-5](https://github.com/sanggi-wjg/my_study/blob/main/Docker-Instance/data/nexus-5.png?raw=true)
+
 ```shell script
 # docker http
 sudo vi /etc/docker/daemon.json
