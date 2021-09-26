@@ -32,12 +32,13 @@ sudo vi /etc/docker/daemon.json
     "insecure-registries" : ["localhost:5000"]
 }
 
-# docker hub login
-docker login localhost:5000
 ```
 
 ### nexus docker hub 테스트
 ```shell script
+# docker hub login
+docker login localhost:5000
+
 # docker hub push
 docker images
 REPOSITORY        TAG         IMAGE ID       CREATED       SIZE
