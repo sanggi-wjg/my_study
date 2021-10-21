@@ -9,6 +9,7 @@ Now... Only God Knows.
 - [X] Clean Code 정리 (7월)
 - [X] Design Pattern 정리 (8월)
 - [ ] Micro Service Architecture 공부 및 데모 구현 (8월~)
+    - Nexus + Jenkins + Docker 연동 배포 데모 (9월)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
 
 ### 언어
@@ -25,6 +26,7 @@ Now... Only God Knows.
 - [X] [Javascript] Web RTC 데모 구현 (9월)
 
 ### TODO Priority
+1. Airflow
 1. MySQL
 1. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
