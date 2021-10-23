@@ -1,5 +1,5 @@
 # Airflow
-#### Concepts
+### Concepts
 Airflow 는 프로그래밍을 통해서 workflows를 작성하고 스케쥴링 하고 모니터링 하는 플랫폼 이다.
 
 Airflow 는 Directed Acyclic Graphs(DAGs)을 통해서 workflows를 작성하며
@@ -9,11 +9,11 @@ DAG은 tasks 사이에 종속성과 실행될 순서, 재시도를 명시 해야
 Taks는 무엇을 할지 작성하여야 한다.
 ![airflow-1](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-1.png?raw=true)
 
-#### Strength points
+### Strength points
 Airflow는 Python 기반으로 쉽게 작성 가능하며 콘솔을 통해서 Task 작업 확인과 bottleneck을 찾을때도 유용하다.
 
 ## Install
-#### Requirements
+### Requirements
 적어도 4Gb 이상의 메모리 이상이여야 작업이 적절하게 실행 될 것.(이상은 8Gb)
 docker-compose 버전이 1.29.1 이상이여야 docker-compose.yaml 이 지원한다.
 ```
@@ -26,7 +26,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
 # docker-compose version 1.29.2, build 5becea4c
 ```
-
+### Download docker-compose.yaml
 ```shell script
 # fetch
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.2.0/docker-compose.yaml'
@@ -35,7 +35,7 @@ curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.2.0/docker-compose.y
 mkdir -p ./dags ./logs ./plugins
 echo -e "AIRFLOW_UID=$(id -u)" > .env
 ```
-#### file contents
+### Airflow container contents
 * **airflow-scheduler** : 모든 tasks, DAGs의 모니터링과 종속성 완료시 task instance를 trigger.
 * **airflow-webserver** : http://localhost:8080
 * **airflow-worker** : Scheduler가 전달한 tasks 를 실행하는 worker.
@@ -45,7 +45,8 @@ echo -e "AIRFLOW_UID=$(id -u)" > .env
 * **redis** : Scheduler에서 worker로 메시지 전달 브로커 
 ![airflow-2](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-2.png?raw=true)
 
-#### container directories
+### Client mounted container directories
+이하 폴더는 클라이언트에 콘테이너 디렉토리 볼륨 공유를 한다. 
 * **./dags** : DAGs file 저장 장소
 * **./logs** : task 실행과 scheduler 로그
 * **./plugins** : Custom plugins 저장 장소
@@ -66,7 +67,7 @@ start_airflow-init_1 exited with code 0
 docker-compose up
 ```
 
-#### 만약 환경이 production 사용에 적절하지 않은 경우에는 아래처럼 
+### 만약 환경이 production 사용에 적절하지 않은 경우에는 아래처럼 
 ```sh
 # The docker-compose we prepare is a "Quick-start" one. 
 # It is not intended to be used in production and it has a number of caveats - 
@@ -80,9 +81,11 @@ re-download the docker-compose.yaml file
 re-start following the instructions from the very beginning in this guide
 ``` 
 
-#### access airflow-webserver
+### airflow-webserver
 위에 적힌것 처럼 초기 접속은 airflow/airflow   
 
 ![airflow-3](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-3.png?raw=true)
 
 ![airflow-4](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-4.png?raw=true)
+
+![airflow-4](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-5.png?raw=true)
