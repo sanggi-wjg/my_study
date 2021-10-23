@@ -42,8 +42,9 @@ echo -e "AIRFLOW_UID=$(id -u)" > .env
 * **airflow-init** : Initialization service.
 * **flower** : Flower는 환경 모니터링 앱이다. http://localhost:5555
 * **postgre** : Database
-* **Redis** : Scheduler에서 worker로 메시지 전달 브로커 
+* **redis** : Scheduler에서 worker로 메시지 전달 브로커 
 ![airflow-2](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-2.png?raw=true)
+
 #### container directories
 * **./dags** : DAGs file 저장 장소
 * **./logs** : task 실행과 scheduler 로그
@@ -63,10 +64,9 @@ start_airflow-init_1 exited with code 0
 # The account created has the login airflow and the password airflow
 
 docker-compose up
-
 ```
 
-#### 만약 환경이 production 사용에 적절하지 않은 경우에
+#### 만약 환경이 production 사용에 적절하지 않은 경우에는 아래처럼 
 ```sh
 # The docker-compose we prepare is a "Quick-start" one. 
 # It is not intended to be used in production and it has a number of caveats - 
@@ -79,3 +79,10 @@ remove the whole directory where you downloaded the docker-compose.yaml file rm 
 re-download the docker-compose.yaml file
 re-start following the instructions from the very beginning in this guide
 ``` 
+
+#### access airflow-webserver
+위에 적힌것 처럼 초기 접속은 airflow/airflow   
+
+![airflow-3](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-3.png?raw=true)
+
+![airflow-4](https://github.com/sanggi-wjg/my_study/blob/main/Airflow/data/airflow-4.png?raw=true)
