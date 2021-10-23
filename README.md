@@ -11,6 +11,7 @@ Now... Only God Knows.
 - [ ] Micro Service Architecture 공부 및 데모 구현 (8월~)
     - Nexus + Jenkins + Docker 연동 배포 데모 (9월)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
+- [] 디아블로 2
 
 ### 언어
 - [X] Go 기초 (8월)
@@ -24,9 +25,9 @@ Now... Only God Knows.
 - [x] [Python, Redis] django, Redis 연동 cache 데모 구현 (9월)
 - [X] [Python] pandas dataframe 정리 (9월)
 - [X] [Javascript] Web RTC 데모 구현 (9월)
+- [] [Python] Airflow
 
 ### TODO Priority
-1. Airflow
 1. MySQL
 1. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
