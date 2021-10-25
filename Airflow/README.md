@@ -64,22 +64,11 @@ start_airflow-init_1 exited with code 0
 
 # The account created has the login airflow and the password airflow
 
+# Daemon
+docker-compose up -d
+# Screen
 docker-compose up
 ```
-
-### 만약 환경이 production 사용에 적절하지 않은 경우에는 아래처럼 
-```sh
-# The docker-compose we prepare is a "Quick-start" one. 
-# It is not intended to be used in production and it has a number of caveats - 
-# one of them being that the best way to recover from any problem is to clean it up and 
-# restart from the scratch.
-
-# The best way to do it is to:
-Run docker-compose down --volumes --remove-orphans command in the directory you downloaded the docker-compose.yaml file
-remove the whole directory where you downloaded the docker-compose.yaml file rm -rf '<DIRECTORY>'
-re-download the docker-compose.yaml file
-re-start following the instructions from the very beginning in this guide
-``` 
 
 ### airflow-webserver
 위에 적힌것 처럼 초기 접속은 airflow/airflow   
