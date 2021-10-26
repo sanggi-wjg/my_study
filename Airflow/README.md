@@ -16,7 +16,7 @@ Airflow는 Python 기반으로 쉽게 작성 가능하며 콘솔을 통해서 Ta
 ### Requirements
 적어도 4Gb 이상의 메모리 이상이여야 작업이 적절하게 실행 될 것.(이상은 8Gb)
 docker-compose 버전이 1.29.1 이상이여야 docker-compose.yaml 이 지원한다.
-```
+```shell script
 # Install docker-compose 1.29.2 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
@@ -25,7 +25,16 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 # Test
 docker-compose --version
 # docker-compose version 1.29.2, build 5becea4c
+
+apt install -y python3-pip
+
+pip install virtualenv
+# 1.4 이상은 에러 발생
+pip install SQLAlchemy==1.3.23 
+pip install apache-airflow
+pip install apache-airflow['cncf.kubernetes']
 ```
+
 ### Download docker-compose.yaml
 ```shell script
 # fetch

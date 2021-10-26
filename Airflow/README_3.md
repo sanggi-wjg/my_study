@@ -1,20 +1,11 @@
 ## Pipeline 작성
-### Python package
-Python으로 Pipeline 작성하자
-```shell script
-pip install virtualenv
-# 1.4 이상은 에러 발생
-pip install SQLAlchemy==1.3.23 
-pip install apache-airflow
-pip install apache-airflow['cncf.kubernetes']
-```
-
 ### Before Testing
 ```shell script
 # check ~/airflow/airflow.cfg
 
 # dags default 경로 
-# dags_folder = /root/airflow/dags 
+# dags_folder = /root/airflow/dags
+nano ~/airflow/dags/sample.py
 ```
 
 ### Testing
@@ -66,4 +57,12 @@ airflow dags test SampleDAG 2015-06-01
 ```shell script
 airflow dags backfill tutorial --start-date 2021-10-24
 # optionally --end-date 2021-10-31
+```
+
+## 사용
+```shell script
+# /home/airflow docker-compose 경로 이다.
+nano /home/airflow/dags/sample.py
+
+# http://[Airflow IP]:8080/ 접속 
 ```
