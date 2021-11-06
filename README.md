@@ -11,10 +11,13 @@ Now... Only God Knows.
 - [X] Nexus + Jenkins + Docker 연동 배포 데모 (8월)
 - [ ] Micro Service Architecture 공부 및 데모 구현 (8월~)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
-- [] 디아블로 2
+- [ ] 디아블로 2
 
 ### 언어
 - [X] Go 기초 (8월)
+- [ ] 프로그래밍 관련
+    * Thread Safe
+    * Singletone 문제 해결   
 
 ### 오픈 소스
 - [X] [Python] color_print pypi 패키지 등록 (7월)
