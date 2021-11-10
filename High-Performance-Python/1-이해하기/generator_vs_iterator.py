@@ -3,7 +3,7 @@ import sys
 from typing import Generator, Iterator, Union
 
 
-def read_csv_generator(filename: str) -> list:
+def read_csv_generator(filename: str) -> str:
     file = open(filename, 'r')
     try:
         for row in csv.reader(file):
