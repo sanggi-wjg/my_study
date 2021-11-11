@@ -27,7 +27,8 @@ num = 30
 fibonacci_dp(num)
 fibonacci_recursion(num)
 ```
-### 출력
+### 테스트 코드 결과
+당연히 recursion 이 오래 걸린다.
 * `ncalls`: 프로파일링 주기 동안 함수 호출 횟수
 * `tottime`: 함수가 실행되는 동안 소비한 초 단위 시간, 다른 함수 호출 시간은 배제
 * `tottime percall`: 함수를 호출하는 데 걸린 평균 시간. tottime / ncalls
@@ -50,4 +51,40 @@ C:\Script_Project\my_study>python -m cProfile -s cumulative  High-Performance-Py
        29    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
         1    0.000    0.000    0.000    0.000 {built-in method sys.setrecursionlimit}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+```
+
+
+## Memory Profiler
+https://github.com/pythonprofilers/memory_profiler
+```shell script
+pip install memory_profiler
+```
+### 테스트 코드
+```python
+from typing import Tuple
+
+from memory_profiler import profile
+
+
+@profile
+def something_method() -> Tuple[int, int]:
+    a = [1] * (10 ** 5)
+    b = [2] * (2 * 10 ** 6)
+    c = [3] * (3 * 10 ** 7)
+    del c
+    return a, b
+
+results = something_method()
+```
+### 테스트 결과
+```
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+     6     89.0 MiB     89.0 MiB           1   @profile
+     7                                         def something_method() -> Tuple[int, int]:
+     8     89.8 MiB      0.8 MiB           1       a = [1] * (10 ** 5)
+     9    105.1 MiB     15.3 MiB           1       b = [2] * (2 * 10 ** 6)
+    10    333.9 MiB    228.9 MiB           1       c = [3] * (3 * 10 ** 7)
+    11    105.1 MiB   -228.9 MiB           1       del c
+    12    105.1 MiB      0.0 MiB           1       return a, b
 ```
