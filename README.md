@@ -2,6 +2,14 @@
 ```
 When I wrote this code, only God & I understood what it did.  
 Now... Only God Knows.
+
+Dear maintainer:
+Once you are done trying to 'optimize' this routine,
+and have realized what a terrible mistake that was,
+please increment the following counter as a warning
+to the next guy:
+
+total_hours_wasted_here = '0'
 ```
 
 # 2021년
@@ -11,13 +19,13 @@ Now... Only God Knows.
 - [X] Nexus + Jenkins + Docker 연동 배포 데모 (8월)
 - [ ] Micro Service Architecture 공부 및 데모 구현 (8월~)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
-- [ ] 디아블로 2 (잃어버린 10월)
+- [ ] 디아블로 2 (잃어버린 10월~?)
 
 ### 언어
 - [X] Go 기초 (8월)
 - [ ] 프로그래밍 심화 (~)
-    * Thread Safe (11월)
-    * Singletone 문제 해결 (11월)   
+    - [X] Thread Safe (11월)
+    - [X] Singletone 문제 해결 (11월)   
 - [ ] High Performance Python (11월)
 
 ### 오픈 소스
