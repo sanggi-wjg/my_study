@@ -25,7 +25,7 @@ class BalanceAccountReader(object):
             start, end = i, i + row_limit
             if end > max_row:
                 end = max_row
-            res = pool.apply_async(read_rows, (start, end))
+            res = pool.apply_async(self.read_rows, (start, end))
             results.update(res.get())
 
         pool.close()
@@ -33,19 +33,15 @@ class BalanceAccountReader(object):
 
         return results
 
-
-def read_rows(start, end):
-    workbook = load_workbook('YTO-2021-10-SHA.xlsx', read_only = True, data_only = True)
-    sheet = workbook.worksheets[1]
-
-    read_data = { row[2].value: {
-        'invoiceNo': row[2].value,
-        'where'    : row[4].value,
-        'weight'   : row[5].value,
-        'cost'     : row[6].value,
-    } for row in sheet.iter_rows(min_row = start, max_row = end) }
-    return read_data
-    # return (start, end)
+    def read_rows(self, start, end):
+        read_data = { row[2].value: {
+            'invoiceNo': row[2].value,
+            'where'    : row[4].value,
+            'weight'   : row[5].value,
+            'cost'     : row[6].value,
+        } for row in self.sheet.iter_rows(min_row = start, max_row = end) }
+        return read_data
+        # return (start, end)
 
 
 if __name__ == '__main__':
