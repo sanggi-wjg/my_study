@@ -65,5 +65,22 @@ async def ping():
 loop = asyncio.get_event_loop()
 loop.run_until_complete(ping())
 loop.close()
+```
 
+## Thread 와 async 의 차이
+CPU bound 작업을 할 때에만 GIL로 인해 한번의 한 쓰레드에서만 파이썬 코드를 실행 할 수 있는데 
+I/O bound 작업의 경우 Thread와 async 모두 GIL을 해체하여 다른 쓰레드가
+이어서 작업을 진행할 수 있도록 여러개의 쓰레드를 사용해 동시 처리가 가능하다.
+
+* `Thread` 객체는 개발자가 직접 생성하지만 `Task` 객체는 직접 생성하지 않고
+`ensure_future()`를 통해 생성 된다.
+* `Thread` 는 `start()`를 통해 실행 되지만 `Task` 는 `ensure_futer()` 에서 예약 실행 된다.
+* `Thread` 객체는 외부에서 쓰레드 내부를 제어할 수 있는 API 가 없고
+아무때나 중단 시키면 시스템의 무결성을 해칠수 있다. 반면, `Task` 객체는 
+코루틴 안에서 `CancledError` 를 발생 시키는 `Task.cancel()` 이 있다.
+
+
+## Ref
+```
+https://nachwon.github.io/asyncio-and-threading/
 ```
