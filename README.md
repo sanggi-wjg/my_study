@@ -26,7 +26,7 @@ total_hours_wasted_here = '0'
 - [ ] 프로그래밍 심화 (~)
     - [X] Thread Safe (11월)
     - [X] Singletone 문제 해결 (11월)   
-- [ ] High Performance Python (11월)
+- [X] High Performance Python (11월)
 
 ### 오픈 소스
 - [X] [Python] color_print pypi 패키지 등록 (7월)
@@ -38,6 +38,7 @@ total_hours_wasted_here = '0'
 - [X] [Python] pandas dataframe 정리 (9월)
 - [X] [Javascript] Web RTC 데모 구현 (9월)
 - [X] [Python + 기타] Airflow 맛보기 (10월)
+- [ ] [Go] go docker-container-exporter 구현(12월)
 
 ### ~ing
 1. Go 심화

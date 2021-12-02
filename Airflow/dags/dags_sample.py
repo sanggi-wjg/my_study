@@ -25,22 +25,20 @@ with DAG(
     tags = ['Sample'],
 ) as dag:
     task1 = BashOperator(
-        task_id = 'bash_print_date',
-        bash_command = 'date'
+        task_id = 'bash_list_human',
+        bash_command = 'ls -h'
     )
     task2 = BashOperator(
-        task_id = 'bash_sleep',
+        task_id = 'bash_disk_human',
         depends_on_past = False,
-        bash_command = 'sleep 5',
+        bash_command = 'df -h',
         retries = 3
     )
 
     task1.doc_md = dedent(
         """
-        #### Task Documentation
-        You can document your task using the attributes `doc_md` (markdown),
-        `doc` (plain text), `doc_rst`, `doc_json`, `doc_yaml` which gets
-        rendered in the UI's Task Instance Details page.
+        ### This Is Docs!
+        Hello World
         ![img](http://montcs.bloomu.edu/~bobmon/Semesters/2012-01/491/import%20soul.png)
         """
     )

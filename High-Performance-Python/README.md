@@ -10,5 +10,14 @@
 [3] https://github.com/sanggi-wjg/my_study/blob/main/High-Performance-Python/README_3.md
 [3-1] https://github.com/sanggi-wjg/my_study/blob/main/High-Performance-Python/README_3_1.md
 
-## 3 - 사전과 세트
+## 4 - 사전과 세트
 [4] https://github.com/sanggi-wjg/my_study/blob/main/High-Performance-Python/README_4.md
+
+## 8 - 비동기 I/O
+[8] https://github.com/sanggi-wjg/my_study/blob/main/High-Performance-Python/README_8.md
+
+## 9 - multiprocessing
+[9] https://github.com/sanggi-wjg/my_study/blob/main/High-Performance-Python/README_9.md
+
+## 10 - Cluster
+[10] https://github.com/sanggi-wjg/my_study/blob/main/High-Performance-Python/README_10.md
