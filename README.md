@@ -17,16 +17,20 @@ total_hours_wasted_here = '0'
 - [X] Clean Code 정리 (7월)
 - [X] Design Pattern 정리 (8월)
 - [X] Nexus + Jenkins + Docker 연동 배포 데모 (8월)
-- [ ] Micro Service Architecture 공부 및 데모 구현 (8월~)
+- [X] Micro Service Architecture 공부 (8월~)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
 - [ ] 디아블로 2 (잃어버린 10월~?)
 
 ### 언어
 - [X] Go 기초 (8월)
-- [ ] 프로그래밍 심화 (~)
+- 프로그래밍 심화 (~)
     - [X] Thread Safe (11월)
     - [X] Singletone 문제 해결 (11월)   
 - [X] High Performance Python (11월)
+- Django
+  - [ ] ORM N+1 query 문제  
+  - [ ] Model FileField 데모 해보기
+  - [ ]
 
 ### 오픈 소스
 - [X] [Python] color_print pypi 패키지 등록 (7월)
@@ -38,7 +42,8 @@ total_hours_wasted_here = '0'
 - [X] [Python] pandas dataframe 정리 (9월)
 - [X] [Javascript] Web RTC 데모 구현 (9월)
 - [X] [Python + 기타] Airflow 맛보기 (10월)
-- [ ] [Go] go docker-container-exporter 구현(12월)
+- [X] [Go] go docker-container-exporter 구현(12월)
+- [X] [Python] web-ide 구현(12월)
 
 ### ~ing
 1. Go 심화
