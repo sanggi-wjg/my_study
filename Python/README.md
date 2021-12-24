@@ -1,5 +1,10 @@
 ## Python
 
+### Magic Method
+* [new](Magic-Method-new.md)
+* [slots](Magic-Method-slots.md)
+
+
 ## 파이썬 개발 이슈
 <details> 
 <summary>Thread-safe</summary>
