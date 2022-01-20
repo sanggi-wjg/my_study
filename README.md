@@ -1,4 +1,6 @@
 # My Study
+맨날 소스만 올리고 정리도 안하고 
+이제 앞으로 정리도 한곳 에서 할겸 겸겸 겸사로 정리해서 올림
 ```
 When I wrote this code, only God & I understood what it did.  
 Now... Only God Knows.
@@ -28,9 +30,7 @@ total_hours_wasted_here = '0'
     - [X] Singletone 문제 해결 (11월)   
 - [X] High Performance Python (11월)
 - Django
-  - [ ] ORM N+1 query 문제  
-  - [ ] Model FileField 데모 해보기
-  - [ ]
+  - [X] ORM N+1 query 문제  
 
 ### 오픈 소스
 - [X] [Python] color_print pypi 패키지 등록 (7월)
@@ -45,13 +45,22 @@ total_hours_wasted_here = '0'
 - [X] [Go] go docker-container-exporter 구현(12월)
 - [X] [Python] web-ide 구현(12월)
 
-### ~ing
-1. Go 심화
+# 2022년
+### 언어
+- Kotlin + Spring boot (1월) (회사 요청)
+  - Java, Kotlin
+  - Spring boot
+  - JPA, QueryDSL
+  - Thymeleaf
+  - gradle
+
+### 오픈 소스
+- [ ] Kubernetes (1월~)
 
 
 ### TODO Priority
-1. MySQL
-1. JS Web Browser API  
+1. Python With Go (파이썬, 고 합쳐서 해보기)
+2. MySQL
+3. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
 https://www.youtube.com/watch?v=Vatd-V0pLXo
-1. C++ ?
