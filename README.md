@@ -54,8 +54,11 @@ total_hours_wasted_here = '0'
   - Thymeleaf
   - gradle
 
+- Go 프로젝트 개발 (1월~)
+  - Gorm, Gin 
+
 ### 오픈 소스
-- [ ] Kubernetes (1월~)
+- [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
 
 
 ### TODO Priority
