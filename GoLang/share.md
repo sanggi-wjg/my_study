@@ -75,8 +75,8 @@ func main() {
 ```
 
 ### PHP VS Go Comparison
-PHP 대용량 엑셀 다운로드 하는 프로젝트에서 60초 이상 걸려서 timeout 에러 발생한 기능을
-Go로 똑같이 구현했을때 2.5초 걸림 
+PHP 대용량 엑셀 다운로드 하는 프로젝트에서 60초 이상 걸려서 timeout 에러 발생한 기능을  
+Go로 똑같이 구현 했을때, db fetch 2.5초 + excel 작성 1초 걸림 
 
 ## 코드
 Go 언어가 다른 최신 언어들과 차별 되는 점  
@@ -131,7 +131,64 @@ func main() {
 yes! It's true
 error : It's not true
 ```
+```go
+func writeRow(f *excelize.File, sheetName string, i int, stock model.Stock, c chan error) {
+	rowNo := strconv.Itoa(i + 2)
+	if err := f.SetCellValue(sheetName, "A"+rowNo, i+1); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "B"+rowNo, stock.RackCd); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "C"+rowNo, fmt.Sprintf("%s(%s)", stock.PartnerName, stock.PartnerId)); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "D"+rowNo, stock.ProductOwner); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "E"+rowNo, fmt.Sprintf("%s(%s)", stock.PartnerUserTypeName, stock.PartnerUserType)); err != nil {
+		c <- err
+	}
+	regDate := stock.RegDate.Format("2006-01-02 15:04:05")
+	if err := f.SetCellValue(sheetName, "F"+rowNo, regDate); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "G"+rowNo, stock.IntervalDate); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "H"+rowNo, stock.ProductItemCd); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "I"+rowNo, stock.ProductCd); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "J"+rowNo, stock.ProductUnitPrice); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "K"+rowNo, stock.ProductVendorPrice); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "L"+rowNo, stock.ProductVendorName); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "M"+rowNo, stock.ProductName); err != nil {
+		c <- err
+	}
+	if err := f.SetCellValue(sheetName, "N"+rowNo, stock.ProductOption); err != nil {
+		c <- err
+	}
 
+	if stock.PartnerId == "tb67" {
+		if err := f.SetCellValue(sheetName, "O"+rowNo, stock.StockBatchNo); err != nil {
+			c <- err
+		}
+		if err := f.SetCellValue(sheetName, "P"+rowNo, stock.ExpireDate); err != nil {
+			c <- err
+		}
+	}
+	c <- nil
+}
+```
 
 ### Go Routine (일명 Coroutine)
 Go 에서는 Goroutine(고루틴)이라는 Async 기법 제공을 하는데   
@@ -173,6 +230,30 @@ func main() {
 0
 4
 [true true true true true true true true true true true]
+```
+```go
+func (s *stockListExcel) write() int {
+	var writeResult []error
+	channel := make(chan error)
+	stocks, _ := model.Search(s.requestParam["warehouseId"].(string), s.requestParam)
+
+	for i := 0; i < len(stocks); i++ {
+		go writeRow(s.file, s.excelDetail.sheetName, i, stocks[i], channel)
+	}
+	for i := 0; i < len(stocks); i++ {
+		c := <-channel
+		if c != nil {
+			logger.Log.Error(i, c)
+		}
+		writeResult = append(writeResult, c)
+	}
+
+	return len(stocks)
+}
+
+func writeRow(f *excelize.File, sheetName string, i int, stock model.Stock, c chan error) {
+    ...
+}
 ```
 
 ### 구조체 struct

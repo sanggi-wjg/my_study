@@ -189,5 +189,90 @@ finally:
 * 즉시 실행이 없음
 * 다른 CI/CD 오픈 소스에 마켓 쉐어 밀려서 신경 덜 쓰는 느낌? 
 
-#### 참고
-https://zzsza.github.io/development/2020/06/06/github-action/
+## 샘플 workflow yaml
+### Hello Github Action
+```yaml
+name: Simple Workflow
+
+on:
+   schedule:
+     - cron: '15 7 * * *' # default UST 
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.7"
+    - name: Install python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Execute code
+      run: |
+        python3 ./simple_workflow.py
+```
+### Send WTI Stock
+```yaml
+name: Send WTI Stock 
+
+on:
+   schedule:
+     - cron: '8 8 * * *' # default UST 
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.7"
+    - name: Install python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install selenium==4.1.0 requests pillow
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Install ubuntu package
+      run: |
+        sudo apt install -y python3-pillow
+        wget https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
+        unzip ./chromedriver_linux64.zip  
+    - name: Execute code
+      run: |
+        python3 ./send_wti_stock.py
+```
+### Flake8 lint
+```yaml
+name: Lint script
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+      branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.7"
+    - name: Install python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint flake8
+      run: |
+        flake8 tests
+```
+
+![](data/2.png)
