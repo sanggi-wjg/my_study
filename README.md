@@ -21,7 +21,7 @@ total_hours_wasted_here = '0'
 - [X] Nexus + Jenkins + Docker 연동 배포 데모 (8월)
 - [X] Micro Service Architecture 공부 (8월~)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
-- [ ] 디아블로 2 (잃어버린 10월~?)
+- [X] 디아블로 2 (잃어버린 10월~11월)
 
 ### 언어
 - [X] Go 기초 (8월)
@@ -47,22 +47,27 @@ total_hours_wasted_here = '0'
 
 # 2022년
 ### 언어
-- Kotlin + Spring boot (1월) (회사 요청)
+- [ ] Kotlin + Spring boot (1월~) (회사 요청)
   - Java, Kotlin
   - Spring boot
   - JPA, QueryDSL
   - Thymeleaf
-  - gradle
+  - Gradle
 
-- Go 프로젝트 개발 (1월~)
+- [ ] Go 프로젝트 개발 (1월~)
   - Gorm, Gin 
-
+  
+- [ ] Python With Go (미정)
 ### 오픈 소스
 - [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
 
+### 기타
+- [ ] lint semgrep, flake8 적용 해보기 (미정)
+  - https://semgrep.dev/
+- [ ] git coverage (미정)
+
 
 ### TODO Priority
-1. Python With Go (파이썬, 고 합쳐서 해보기)
 2. MySQL
 3. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
