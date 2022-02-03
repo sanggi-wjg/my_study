@@ -1,10 +1,16 @@
 # Go
 
-## 개요
+## Go 소개
 2007년 구글에서 개발을 시작하여 2012년 GO 버젼 1.0을 완성.  
 (현재 1.17 까지 realase)  
 
-디자인은 로버트 그리즈머, 롭 파이크, 케네스 톰슨 (대학교 책에 나오는 사람, C언어 만든 사람) 이 진행
+디자인은 로버트 그리즈머, 롭 파이크, 케네스 톰슨 (대학교 전공 서적에 나오는 사람, C언어 만든 사람) 이 진행
+
+### Using at
+![](data/1.png)
+
+### Use cases
+https://go.dev/solutions/#case-studies
 
 ### 특징
 * 컴파일 언어
@@ -13,24 +19,23 @@
 * 빠른 속도 
 * 일차적 개발 목적은 시스템 프로그래밍
 
-### 개발적 관점에서 장단점
-
+### 직접 개발하면서 느낀 장점과 단점
 #### 장점
-- Go 는 문법이 매우 간단  
-  - 문법은 C++, Java, Python 장단점 모두 모아 놓은 느낌
+- Go 는 문법이 매우 간단하고 배우기 쉽다  
+  - 문법은 C++, Java, Python 장단점 섞어 놓은 느낌
 - 동시성 기능 구현 쉬움
-- 쉬운 배포
-- 모든 Go 소스는 동일한 소스 컨벤션 가짐
+- 배포 Architecture 관점에서 진짜 진짜 쉬운 배포 
+- 모든 Go 프로젝트는 누가 개발하든 모두 동일한 소스 컨벤션 가짐
 - 다른 컴파일 언어에 비해 빠른 컴파일
 - 다양한 라이브러리
-  - Go 로 신규 개발하거나 이전한 천조국 회사님들의 오픈 소스 기여로   
+  - Go 로 신규 개발하거나 프로젝트 이전한 천조국 회사님들의 오픈 소스 기여로   
   
 #### 단점
 - 제네릭 문법 없음 (1.18 부터 한다고는 함)
 - 클래스 없음
 - 순환 참조 허용 (low tolerance for circular dependency) 
   - 진짜 빡세게 봐서 하나도 허용 하지 않음 
-- large scale 로 개발된 오픈 소스가 없지는 않으나 다른 언어에 비해 적음        
+- large scale 로 개발된 오픈 소스가 없지는 않으나 다른 언어에 비해 적음
 - 똑같은 기능을 목적으로 개발된 오픈 소스 여도 다른 언어에 비해 기능이 적은 경우도 겪었고  
   인구 Pool 자체가 적어 오픈 소스에 관한 내용도 인터넷 자체에 적고 책이나 강의 자체도 별로 없음
 
@@ -39,13 +44,39 @@
 이것으로 에러 상황에 대해서 개발자가 너무 많은 에러 핸들 소스를 작성해야 한다.   
 다만 그렇게해서 안정성은 올라갈 수 있는 측면도 있는 것 같다.  
 
+## Performance Comparison
+### Python VS Go Comparison
+```python
+import datetime
 
-### Using at
-![](data/1.png)
+start = datetime.datetime.now()
+RANGE = 10000
+result = []
 
-### Use cases
-https://go.dev/solutions/#case-studies
+for i in range(RANGE):
+    result.append(i ** i)
 
+print(datetime.datetime.now() - start)
+# 0:00:05.816210
+```
+```go
+const RANGE = 10000
+
+func main() {
+	start := time.Now()
+	var result []float64
+
+	for i := 0; i < RANGE; i++ {
+		result = append(result, math.Pow(float64(i), float64(i)))
+	}
+	fmt.Printf("%s", time.Since(start))
+}
+// 1.0328ms
+```
+
+### PHP VS Go Comparison
+PHP 대용량 엑셀 다운로드 하는 프로젝트에서 60초 이상 걸려서 timeout 에러 발생한 기능을
+Go로 똑같이 구현했을때 2.5초 걸림 
 
 ## 코드
 Go 언어가 다른 최신 언어들과 차별 되는 점  
