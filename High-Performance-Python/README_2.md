@@ -8,7 +8,6 @@
 ```
 
 ### cProfile 테스트
-테스트 코드  
 피보나치 수열을 dp와 recursion 으로 구현한 함수
 ```python
 def fibonacci_dp(n):
@@ -59,12 +58,11 @@ https://github.com/pythonprofilers/memory_profiler
 ```shell script
 pip install memory_profiler
 ```
+
 ### 테스트 코드
 ```python
 from typing import Tuple
-
 from memory_profiler import profile
-
 
 @profile
 def something_method() -> Tuple[int, int]:
@@ -76,7 +74,6 @@ def something_method() -> Tuple[int, int]:
 
 results = something_method()
 ```
-### 테스트 결과
 ```
 Line #    Mem usage    Increment  Occurences   Line Contents
 ============================================================

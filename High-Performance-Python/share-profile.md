@@ -4,7 +4,7 @@
 ### 4가지 검색 방법 차이
 ![](data/share-6.png)
 
-약 35만 라인 csv 파일에서 "Hana Bank" 를 4가지 방법으로 검색
+약 40만 라인 csv 파일에서 "Hana Bank" 를 4가지 방법으로 검색
 ```python
 def search_1(haystack, needle):
     for item in haystack:
@@ -218,4 +218,87 @@ Line #    Mem usage    Increment  Occurences   Line Contents
     10    333.9 MiB    228.9 MiB           1       c = [3] * (3 * 10 ** 7)
     11    105.1 MiB   -228.9 MiB           1       del c
     12    105.1 MiB      0.0 MiB           1       return a, b
+```
+
+
+### 테스트 코드 2
+```python
+from memory_profiler import profile
+
+
+@profile
+def main():
+    def read_csv_generator(filename: str) -> str:
+        with open(filename, 'r') as file:
+            for row in csv.reader(file):
+                yield row[0]
+
+    def read_csv_list(filename: str) -> list:
+        with open(filename, 'r') as file:
+            bank_names = [row[0] for row in csv.reader(file)]
+        return bank_names
+
+    generator = read_csv_generator("banklist.csv")
+    iterator = read_csv_list("banklist.csv")
+
+
+main()
+```
+
+```shell
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+     8     50.4 MiB     50.4 MiB           1   @profile
+     9                                         def main():
+    10     83.7 MiB      0.0 MiB           2       def read_csv_generator(filename: str) -> str:
+    11                                                 with open(filename, 'r') as file:
+    12                                                     for row in csv.reader(file):
+    13                                                         yield row[0]
+    14                                         
+    15     50.4 MiB      0.0 MiB           2       def read_csv_list(filename: str) -> list:
+    16     50.5 MiB      0.0 MiB           1           with open(filename, 'r') as file:
+    17     83.7 MiB     13.9 MiB      394268               bank_names = [row[0] for row in csv.reader(file)]
+    18     83.7 MiB      0.0 MiB           1           return bank_names
+    19                                         
+    20     50.4 MiB      0.0 MiB           1       generator = read_csv_generator("banklist.csv")
+    21     83.7 MiB      0.0 MiB           1       iterator = read_csv_list("banklist.csv")
+```
+
+## Line profiler
+```python
+pip install line-profiler
+```
+
+### 테스트 코드
+```python
+import math
+
+@profile
+def calculate_something(size = 1000):
+    temp = [0] * size
+    for i in range(size):
+        temp[i] = math.factorial(i)
+    return temp
+
+
+t = calculate_something()
+```
+```shell
+kernprof.exe -l -v .\High-Performance-Python\2-프로파일링으로-병목지점-찾기\2-3-line_profiler.py
+
+Wrote profile results to 2-3-line_profiler.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.0127195 s
+File: .\High-Performance-Python\2-프로파일링으로-병목지점-찾기\2-3-line_profiler.py
+Function: calculate_something at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                           @profile
+     5                                           def calculate_something(size = 1000):
+     6         1          3.0      3.0      0.0      temp = [0] * size
+     7      1001        241.0      0.2      1.9      for i in range(size):
+     8      1000      12473.5     12.5     98.1          temp[i] = math.factorial(i)
+     9         1          2.0      2.0      0.0      return temp
 ```
