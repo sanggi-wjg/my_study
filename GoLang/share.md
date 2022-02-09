@@ -30,6 +30,9 @@ https://go.dev/solutions/#case-studies
 - 다양한 라이브러리
   - Go 로 신규 개발하거나 프로젝트 이전한 천조국 회사님들의 오픈 소스 기여로   
   
+
+https://github.com/golang-standards/project-layout
+
 #### 단점
 - 제네릭 문법 없음 (1.18 부터 한다고는 함)
 - 클래스 없음
