@@ -1,6 +1,6 @@
 ## 비동기 I/O
 
-개발 업무를 하면서 실제 코드 자체보다는 코드에 필요한 데이터를 얻어오는 작업이 병목이 생기는 것을
+개발 업무를 하면서 실제 코드 자체보다는 필요한 데이터를 얻어오는 작업이 병목이 생기는 것을
 많이 겪었을 것이다. 이런경우 프로그램 ``I/O 위주``라 하고 I/O 효율이 속도를 제한 한다는 것을 의미한다.
 
 I/O는 프로그램 흐름에 큰 영향을 미친다. 파일이나 네트워크 소켓 연결을 통해 데이터를 읽을 때까지
@@ -13,58 +13,55 @@ I/O는 프로그램 흐름에 큰 영향을 미친다. 파일이나 네트워크
 파이썬에서는 제너레이터 기반의 Coroutine과 ``async 함수``로 ``Native Coroutine``을 사용한다.
 async 는 Python 3.6 부터 지원한다.
 
-### 샘플
-```python
-import asyncio
-from openpyxl import load_workbook
+![](data/8-1.png)
 
-async def load(path):
-    workbook = load_workbook(path, read_only = True, data_only = True)
-    return workbook
+![](data/8-2.png)
 
-async def something_big():
-    return [i for i in range(10000000)]
-
-async def something_small():
-    return [i for i in range(1000000)]
-
-async def get_sheet_and_somethings(path):
-    # create_task 와 동시에 실행
-    task1 = asyncio.create_task(load(path))
-    task2 = asyncio.create_task(something_big())
-    task3 = asyncio.create_task(something_small())
-    # 대기
-    await task1
-    await task2
-    await task3
-    return task1.result()
-
-result = asyncio.run(get_sheet_and_somethings('YTO-2021-10-SHA.xlsx'))
+### Coroutine request sample 
+```go
+router.GET("/long_sync", func(c *gin.Context) {
+    // simulate a long task with time.Sleep(). 5 seconds
+    time.Sleep(5 * time.Second)
+    c.String(http.StatusOK, "Done!")
+})
 ```
 
 ```python
 import asyncio
-from urllib.request import Request, urlopen
+import aiohttp
 
+async def request_long_sync():
+    url = "http://localhost:9000/long_sync"
+    async with aiohttp.ClientSession() as client:
+        async with client.get(url) as res:
+            print(await res.read())
 
-async def fetch(num):
-    request = Request('http://localhost:9000/ping')
-    response = await loop.run_in_executor(None, urlopen, request)
-    return num, response
+async def async_method():
+    await asyncio.wait([
+        request_long_sync(),
+        request_long_sync()
+    ])
 
+asyncio.run(async_method())
+```
 
-async def ping():
-    tasks = [asyncio.ensure_future(
-        fetch(i)
-    ) for i in range(100)]
+```python
+import asyncio
+import aiohttp
 
-    result = await asyncio.gather(*tasks)
-    print(result)
+async def request_long_sync():
+    url = "http://localhost:9000/long_sync"
+    async with aiohttp.ClientSession() as client:
+        async with client.get(url) as res:
+            print(await res.read())
 
+async def async_method():
+    task1 = asyncio.create_task(request_long_sync())
+    task2 = asyncio.create_task(request_long_sync())
+    await task1
+    await task2
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(ping())
-loop.close()
+asyncio.run(async_method())
 ```
 
 ## Thread 와 async 의 차이

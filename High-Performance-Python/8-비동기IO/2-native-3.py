@@ -1,25 +1,20 @@
 import asyncio
 
-import requests
+import aiohttp
 
 
-async def request_ping():
+async def request_long_sync():
     url = "http://localhost:9000/long_sync"
-    res = requests.get(url)
-    print(res.text)
+    async with aiohttp.ClientSession() as client:
+        async with client.get(url) as res:
+            print(await res.read())
 
 
-async def request_hello():
-    url = "http://localhost:9000/long_sync"
-    res = requests.get(url)
-    print(res.text)
+async def async_method():
+    await asyncio.wait([
+        request_long_sync(),
+        request_long_sync()
+    ])
 
 
-async def something_method():
-    task1 = asyncio.create_task(request_ping())
-    task2 = asyncio.create_task(request_hello())
-    await task1
-    await task2
-
-
-asyncio.run(something_method())
+asyncio.run(async_method())
