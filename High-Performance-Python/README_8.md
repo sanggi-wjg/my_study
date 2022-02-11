@@ -77,6 +77,13 @@ I/O bound 작업의 경우 Thread와 async 모두 GIL을 해체하여 다른 쓰
 코루틴 안에서 `CancledError` 를 발생 시키는 `Task.cancel()` 이 있다.
 
 
+### FastAPI Offer Coroutine  
+최근 Python Web Framework 가 
+Flask or Django 에서 -----> FastAPI 로 넘어가는 추세
+
+![](data/8-3.png)
+![](data/8-4.png)
+
 ## Ref
 ```
 https://nachwon.github.io/asyncio-and-threading/
