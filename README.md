@@ -16,8 +16,8 @@ total_hours_wasted_here = '0'
 
 # 2021년
 ### 이론
-- [X] Clean Code 정리 (7월)
-- [X] Design Pattern 정리 (8월)
+- [X] Clean Code 재정리 (7월)
+- [X] Design Pattern 재정리 (8월)
 - [X] Nexus + Jenkins + Docker 연동 배포 데모 (8월)
 - [X] Micro Service Architecture 공부 (8월~)
 - [X] JSON Web Token 공부 및 데모 구현(9월)
@@ -55,7 +55,7 @@ total_hours_wasted_here = '0'
   - Gradle
 
 - [X] Go 프로젝트 개발 (1월~)
-  - Gorm, Gin
+  - Gorm, Gin (1000줄 정도 간단하게)
   
 - [X] Python With Go (2월)
   - 간단하게 해봄
@@ -64,8 +64,7 @@ total_hours_wasted_here = '0'
 - [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
 
 ### 기타
-- [ ] lint semgrep, flake8 적용 해보기 (미정)
-  - https://semgrep.dev/
+- [X] flake8, pytest Github action 적용 해보기 (2월)
 - [ ] git coverage (미정)
 
 
