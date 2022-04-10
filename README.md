@@ -60,12 +60,15 @@ total_hours_wasted_here = '0'
 - [X] Python With Go (2월)
   - 간단하게 해봄
   
+- [X] Go testing 여러가지 
+
 ### 오픈 소스
 - [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
+- [X] Python + SQLAlchemy stock visualize 구현(2월)
 
 ### 기타
 - [X] flake8, pytest Github action 적용 해보기 (2월)
-- [ ] git coverage (미정)
+- [X] git coverage (2월)
 
 
 ### TODO Priority
