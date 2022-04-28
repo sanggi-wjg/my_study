@@ -46,6 +46,10 @@ total_hours_wasted_here = '0'
 - [X] [Python] web-ide 구현(12월)
 
 # 2022년
+
+## 코로나 이슈
+2022년 4월 11일 확진 이후 휴우증 ㅠㅠ
+
 ### 언어
 - [ ] Kotlin + Spring boot (1월~) (회사 요청)
   - Java, Kotlin
