@@ -51,7 +51,7 @@ total_hours_wasted_here = '0'
 2022년 4월 11일 확진 이후 휴우증 ㅠㅠ
 
 ### 언어
-- [ ] Kotlin + Spring boot (1월~) (회사 요청)
+- [ ] Kotlin + Spring boot (1월~6월) (회사 요청)
   - Java, Kotlin
   - Spring boot
   - JPA, QueryDSL
@@ -69,6 +69,7 @@ total_hours_wasted_here = '0'
 ### 오픈 소스
 - [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
 - [X] Python + SQLAlchemy stock visualize 구현(2월)
+- [ ] GraphQL
 
 ### 기타
 - [X] flake8, pytest Github action 적용 해보기 (2월)
