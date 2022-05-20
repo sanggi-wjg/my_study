@@ -47,7 +47,7 @@ total_hours_wasted_here = '0'
 
 # 2022년
 
-## 코로나 이슈
+### 코로나 이슈
 2022년 4월 11일 확진 이후 휴우증 ㅠㅠ
 
 ### 언어
@@ -64,7 +64,10 @@ total_hours_wasted_here = '0'
 - [X] Python With Go (2월)
   - 간단하게 해봄
   
-- [X] Go testing 여러가지 
+- [X] Go testing 여러가지
+
+- [ ] JS Fetch API 샘플 구현해보기
+  - https://wonit.tistory.com/449
 
 ### 오픈 소스
 - [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
