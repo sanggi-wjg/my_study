@@ -48,7 +48,12 @@ total_hours_wasted_here = '0'
 # 2022년
 
 ### 코로나 이슈
-2022년 4월 11일 확진 이후 휴우증 ㅠㅠ
+[2022년 4월 11일]   
+코로나 확진도 확진인데   
+이후 휴우증으로 고생 ㅠㅠ
+
+[2022년 6월 17일]  
+퇴사 했다. 앙 백수띠
 
 ### 언어
 - [ ] Kotlin + Spring boot (1월~6월) (회사 요청)
@@ -58,16 +63,16 @@ total_hours_wasted_here = '0'
   - Thymeleaf
   - Gradle
 
-- [X] Go 프로젝트 개발 (1월~)
+- [X] Go 프로젝트 개발 (1월)
   - Gorm, Gin (1000줄 정도 간단하게)
   
 - [X] Python With Go (2월)
   - 간단하게 해봄
   
-- [X] Go testing 여러가지
+- [X] Go testing 여러가지 (2월)
 
-- [ ] JS Fetch API 샘플 구현해보기
-  - https://wonit.tistory.com/449
+- Python 이것 저것 정리랑 샘플 만들자
+  - [X] Validator (7월)
 
 ### 오픈 소스
 - [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
@@ -80,6 +85,8 @@ total_hours_wasted_here = '0'
 
 
 ### TODO Priority
+1. JS Fetch API 샘플 구현해보기
+   - https://wonit.tistory.com/449
 2. MySQL
 3. JS Web Browser API  
 https://developer.mozilla.org/ko/docs/Web/API  
