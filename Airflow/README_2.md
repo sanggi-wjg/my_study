@@ -850,10 +850,10 @@ expose_hostname = True
 # Expose stacktrace in the web server
 expose_stacktrace = True
 
-# Default DAG view. Valid values are: ``tree``, ``graph``, ``duration``, ``gantt``, ``landing_times``
+# Default DAG view. Valid-DTO values are: ``tree``, ``graph``, ``duration``, ``gantt``, ``landing_times``
 dag_default_view = tree
 
-# Default DAG orientation. Valid values are:
+# Default DAG orientation. Valid-DTO values are:
 # ``LR`` (Left->Right), ``TB`` (Top->Bottom), ``RL`` (Right->Left), ``BT`` (Bottom->Top)
 dag_orientation = LR
 
