@@ -1,6 +1,8 @@
 # Validate Class Attributes in Python
 Python에서 DTO, Data Class로 사용하는 Class를 Validation 하는 여러 방법
 
+채용 과제랑 Spring boot 개발 하다가 뭔가 뭔가 느낌이 왔다.   
+그래서 정리해야 할 것 같아서 정리한다.
 
 ## 1. Validation method 사용
 간단한 방법으로 `__init__` 메소드에서 validate 하는 방법이다.
