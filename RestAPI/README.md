@@ -37,10 +37,17 @@ N:M 관계를 1:N, N:1 관계로 풀음
 테이블을 수정을 해야 한다.
 ![](.README_images/0d6c245f.png)
 
+참고한 사이트에서는 `PUT` Method를 사용하라고 하는데,
+비지니스 관점에서는 삭제로 보이기 때문에(비록 실제로 삭제는 안하지만)
+`DELETE` Method를 사용하는게 맞아 보인다.
+
 
 ### 4. New Feature: Task History
 Task의 등록, 수정 시간에 대해서 따로 기록을 해달라는 요청이 온다면
-단순하게 Task 테이블에 `created_at`, `updated_at` 두 컬럼을 추가 해도 될 것이다.
+단순하게 Task 테이블에 `created_at`, `updated_at` 두 컬럼을 추가 해도 될 것이다.  
+
+`created_at` 등의 `xx_at` naming convention 보다는
+`date_of_created`, `datetime_of_created` 등의 convention을 가지는게 좋다.
 
 다만 이렇게 한다면 미래에 다음과 같은 문제들이 발생할 수도 있다.
 * 이전에 삭제한 Task의 등록 시간이 궁금하다면?

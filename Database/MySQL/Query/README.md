@@ -18,7 +18,7 @@ LIMIT 1
 
 
 <details>
-<summary>Pk별로 오래된 날짜 가져오기 / Min()</summary>
+<summary>Pk별로 오래된 날짜 가져오기 ✔Min()</summary>
 
 ![](.README_images/925529ff.png)
 ```sql
@@ -32,7 +32,7 @@ GROUP BY player_id
 
 
 <details>
-<summary>하루 전날보다 큰 값을 가진 Row 가져오기 / Datediff()</summary>
+<summary>하루 전날보다 큰 값을 가진 Row 가져오기 ✔Datediff()</summary>
 
 ![](.README_images/f0b79eb0.png)
 ```sql
@@ -47,7 +47,7 @@ WHERE
 </details>
 
 <details>
-<summary>전형적인 Left Outer Join</summary>
+<summary>전형적인 ✔Left Outer Join</summary>
 
 ![](.README_images/0ff3e2c2.png)
 ```sql
@@ -61,7 +61,7 @@ WHERE O.id = null
 </details>
 
 <details>
-<summary>전형적인 Group By Having Count</summary>
+<summary>전형적인 ✔Group By ✔Having Count</summary>
 
 ![](.README_images/2b31cb86.png)
 ```sql
@@ -75,7 +75,7 @@ GROUP BY class having count(*) >= 5
 
 
 <details>
-<summary>두번째로 높은값 찾기</summary>
+<summary>두번째로 높은값 찾기 ✔Distinct ✔Limit</summary>
 
 ![](.README_images/dfe5f50e.png)
 ```sql
@@ -84,5 +84,29 @@ SELECT
         (SELECT DISTINCT salary FROM Employee ORDER BY salary desc LIMIT 1, 1)
         , null
    ) as SecondHighestSalary 
+```
+</details>
+
+
+<details>
+<summary>N번째로 높은값 찾기 ✔MySQL Function ✔Distinct ✔Limit</summary>
+
+![](.README_images/3372926b.png)
+![](.README_images/2c1ebf17.png)
+```sql
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+
+DECLARE M INT;
+SET M=N-1;
+
+  RETURN (
+      # Write your MySQL query statement below.
+      SELECT IFNULL(
+        (SELECT DISTINCT salary FROM Employee ORDER BY salary DESC LIMIT M, 1)
+        , null
+      )
+  );
+END
 ```
 </details>
