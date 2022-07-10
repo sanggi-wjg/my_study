@@ -110,3 +110,46 @@ SET M=N-1;
 END
 ```
 </details>
+
+<details>
+<summary>Row 값 Rank 구하기 ✔Rank Over</summary>
+
+![](.README_images/79977b95.png)
+```sql
+SELECT 
+    score
+    , DENSE_RANK() OVER(order by score desc) as 'rank'
+FROM
+    Scores 
+ORDER BY score desc
+```
+
+![](.README_images/b76630cf.png)
+![](.README_images/2724ef5f.png)
+</details>
+
+
+
+<details>
+<summary>Row 값 Rank 구하기 ✔Cross Join ✔Max</summary>
+
+![](.README_images/ac4c78aa.png)
+```sql
+SELECT 
+	D.name as Department,
+    E.name as Employee,
+	E.salary as Salary
+FROM 
+	Employee E, Department D,
+	(SELECT
+		departmentId, MAX(Salary) as maxSalary
+	FROM
+		Employee
+	GROUP BY DepartmentId) A
+WHERE 
+	E.departmentId = A.departmentId
+    AND D.id= A.departmentId
+    AND E.salary = A.maxSalary
+    
+```
+</details>
