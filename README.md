@@ -56,7 +56,7 @@ total_hours_wasted_here = '0'
 퇴사 했다. 앙 백수띠
 
 ### 언어
-- [ ] Kotlin + Spring boot (1월~6월) (회사 요청)
+- [X] Kotlin + Spring boot (1월~6월) (회사에서 요청)
   - Java, Kotlin
   - Spring boot
   - JPA, QueryDSL
@@ -74,6 +74,11 @@ total_hours_wasted_here = '0'
 - Python 이것 저것 정리랑 샘플 만들자
   - [X] Validator (7월)
 
+- [X] FastAPI Demo 구현 해보기(5월)
+  - [X] TTS Get API 구현 (7월)
+  - [ ] 음성 인식 Get?? API 구현
+  - [ ] 동영상 Stream 구현 해보기
+
 ### 오픈 소스
 - [ ] Kubernetes (1월~) 일단 보류 (┬┬﹏┬┬)
 - [X] Python + SQLAlchemy stock visualize 구현(2월)
@@ -82,6 +87,7 @@ total_hours_wasted_here = '0'
 ### 기타
 - [X] flake8, pytest Github action 적용 해보기 (2월)
 - [X] git coverage (2월)
+- [ ] git commit message convention rule 정리
 
 
 ### TODO Priority
