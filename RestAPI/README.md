@@ -1,5 +1,19 @@
 # RestAPI
 
+
+
+## REST API 개요
+https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/
+
+https://hanamon.kr/rest-api/
+
+
+
+## REST API 디자인
+https://hanamon.kr/rest-api-%EB%94%94%EC%9E%90%EC%9D%B8-%EA%B0%80%EC%9D%B4%EB%93%9C/
+
+
+
 ## 간단한 REST API 설계 방법
 ### Start from a good database design
 * Entity들이 반복 Connection이나 Circular Connection을 가지지 않도록
