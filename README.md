@@ -88,7 +88,7 @@ total_hours_wasted_here = '0'
 - [X] flake8, pytest Github action 적용 해보기 (2월)
 - [X] git coverage (2월)
 - [ ] git commit message convention rule 정리
-
+- gRPC
 
 ### TODO Priority
 1. JS Fetch API 샘플 구현해보기
