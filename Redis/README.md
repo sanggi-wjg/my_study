@@ -40,9 +40,13 @@ echo never > /sys/kernel/mm/transparent_hugepage/enabled
 * https://redis.io/docs/manual/data-types/
 ![](images/4e8dfb1b.png)
 
+### KEY (모든것은 Key로)
+* 너무 긴 Key는 메모리 측면에서 좋지 않다.
+* 너무 짧거나 축약된 Key도 좋지 않다
+
 ### STRING
-* 모든 종류의 문자열(이진 데이터 포함) 저장 가능
-* JPEG 이미지, HTML fragment 등 캐시 용도로 사용
+* 모든 종류의 문자열(Binary Safe) 저장 가능
+* JPEG 이미지, HTML fragment, Serialized Object 등 캐시 용도로 사용
 * 최대 사이즈 512MB
 
 
@@ -53,7 +57,11 @@ echo never > /sys/kernel/mm/transparent_hugepage/enabled
   (Linked List 이니 접근시에 O(N) 복잡도를 가짐)
 * Pub-Sub(생산자-소비자) 패턴에서 사용  
   (생산자-소비자 패턴이란? https://coding-food-court.tistory.com/81)
-* 트위터에서 각 유저 타임라인 트윗을 보여주는데 사용
+* 트위터에서 각 유저별로 최근에 올린 트윗을 보여주는데 사용
+* 홈페이지 최근 업데이트된 사진들을 빠른 속도로 보여주고 싶은 경우?
+  * 매일 유저는 새로운 사진을 올릴것이고 이것을 `LPUSH`로 List에 Add
+  * 그리고 우리는 유저가 홈페이지 방문하면 `LRANGE 0 9`로 최근 사진을 가져오자
+* `LTRIM myList 0 999`명령어로 1000개의 최신 데이터를 유지할 수 있다.
 ![](images/f8486469.png)
 
 

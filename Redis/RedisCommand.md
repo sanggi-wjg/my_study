@@ -79,13 +79,18 @@ hget {key} {column}
 set key value
 get key
 ```
+Set는 이미 저장된 Key의 Value를 Replace할 수 있다.
 ```shell 
-127.0.0.1:6379> set key value
+127.0.0.1:6379> set myKey value
 OK
-127.0.0.1:6379> get key
+127.0.0.1:6379> get myKey
 "value"
-```
 
+127.0.0.1:6379> set myKey something
+OK
+127.0.0.1:6379> get myKey
+"something"
+```
 
 ### Multiple Get, Set Key:Value
 ```shell
@@ -214,6 +219,45 @@ strlen key
 (integer) 4
 ```
 
+### Counter
+string 기반의 Redis이지만 atomic increment 기능이 있다.
+```shell
+incr key
+incrby key increment
+decr key
+decrby key decrement
+```
+```shell
+127.0.0.1:6379> set user:ads:1:click 0
+OK
+
+127.0.0.1:6379> incr user:ads:1:click
+(integer) 1
+127.0.0.1:6379> incr user:ads:1:click
+(integer) 2
+127.0.0.1:6379> incr user:ads:1:click
+(integer) 3
+127.0.0.1:6379> get user:ads:1:click
+"3"
+
+127.0.0.1:6379> incrby user:ads:1:click 10
+(integer) 13
+127.0.0.1:6379> get user:ads:1:click
+"13"
+
+127.0.0.1:6379> decr user:ads:1:click 
+(integer) 12
+127.0.0.1:6379> decr user:ads:1:click 
+(integer) 11
+127.0.0.1:6379> get user:ads:1:click
+"11"
+127.0.0.1:6379> decrby user:ads:1:click 10
+(integer) 1
+127.0.0.1:6379> get user:ads:1:click
+"1"
+```
+
+
 ### Get, Set Hash
 ```shell
 hset key field value
@@ -227,4 +271,83 @@ hset key field value
 127.0.0.1:6379> hmget user-1 name age
 1) "Snow"
 2) "10"
+```
+
+
+### List Push
+```shell
+rpush key value (right push)
+lpush key value (left push)
+lpop key
+rpop key
+lrange key start end
+```
+lrange의 end index 값은 -1은 마지막, -2는 끝에서 두번째... (파이썬과 같다)
+```shell
+127.0.0.1:6379> rpush myList A
+(integer) 1
+127.0.0.1:6379> rpush myList B
+(integer) 2
+127.0.0.1:6379> lpush myList 0
+(integer) 3
+
+127.0.0.1:6379> lrange myList 0 1
+1) "0"
+2) "A"
+127.0.0.1:6379> lrange myList 0 -1
+1) "0"
+2) "A"
+3) "B"
+```
+```shell
+127.0.0.1:6379> rpush myList 1 2 3 4 5 "hello world"
+(integer) 6
+127.0.0.1:6379> lrange myList 0 -1
+1) "1"
+2) "2"
+3) "3"
+4) "4"
+5) "5"
+6) "hello world"
+```
+```shell
+127.0.0.1:6379> lpop myList
+"1"
+127.0.0.1:6379> rpop myList
+"hello world"
+127.0.0.1:6379> lrange myList 0 -1
+1) "2"
+2) "3"
+3) "4"
+4) "5"
+127.0.0.1:6379> rpop myList
+"5"
+127.0.0.1:6379> rpop myList
+"4"
+127.0.0.1:6379> rpop myList
+"3"
+127.0.0.1:6379> rpop myList
+"2"
+127.0.0.1:6379> rpop myList
+(nil)
+127.0.0.1:6379> lrange myList 0 -1
+(empty array)
+```
+```shell
+127.0.0.1:6379> lpush myList 1
+(integer) 1
+127.0.0.1:6379> lpush myList 2
+(integer) 2
+127.0.0.1:6379> lpush myList 3
+(integer) 3
+127.0.0.1:6379> lpush myList 4
+(integer) 4
+127.0.0.1:6379> lpush myList 5
+(integer) 5
+127.0.0.1:6379> ltrim myList 0 2
+OK
+127.0.0.1:6379> lrange myList 0 -1
+1) "5"
+2) "4"
+3) "3"
 ```

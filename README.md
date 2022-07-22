@@ -76,7 +76,7 @@ total_hours_wasted_here = '0'
 
 - [X] FastAPI Demo 구현 해보기(5월)
   - [X] TTS Get API 구현 (7월)
-  - [ ] 음성 인식 Get?? API 구현
+  - [X] 음성 인식 Get?? API 구현
   - [ ] 동영상 Stream 구현 해보기
 
 ### 오픈 소스
@@ -87,8 +87,9 @@ total_hours_wasted_here = '0'
 ### 기타
 - [X] flake8, pytest Github action 적용 해보기 (2월)
 - [X] git coverage (2월)
-- [ ] git commit message convention rule 정리
-- gRPC
+- [X] git commit message convention rule 정리 (7월)
+- [X] gRPC 이론만 정리 (7월)
+- [ ] Redis 정리 (7월)
 
 ### TODO Priority
 1. JS Fetch API 샘플 구현해보기
